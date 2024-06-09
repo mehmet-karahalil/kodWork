@@ -67,6 +67,15 @@ def enableProguardInReleaseBuilds = false
  * give correct results when using with locales other than en-US. Note that
  * this variant is about 6MiB larger per architecture than default.
  */
+
+project.ext.vectoricons = [
+    iconFontNames: [ 'MaterialCommunityIcons.ttf'] // Specify font files
+]
+
+apply from: file("../../node_modules/react-native-vector-icons/fonts.gradle")
+
+
+
 def jscFlavor = 'org.webkit:android-jsc:+'
 
 android {
